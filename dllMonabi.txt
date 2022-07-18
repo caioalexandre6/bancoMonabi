@@ -1,0 +1,35 @@
+CREATE SCHEMA `monabi_add` ;
+
+CREATE TABLE `monabi_add`.`historico_soma` (
+  `id` int(11) NOT NULL,
+  `f_numero` int(11) NOT NULL,
+  `s_numero` int(11) NOT NULL,
+  `resultado` int(11) NOT NULL,
+  `deleted` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+
+
+CREATE TABLE `monabi_add`.`next_calc_val` (
+  `next_val` int(11) NOT NULL,
+  PRIMARY KEY (`next_val`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `monabi_add`.`next_calc_val` (`next_val`) VALUES ('0');
+
+
+
+CREATE TABLE `monabi_add`.`ultima_res` (
+  `id` int(11) NOT NULL,
+  `ultima_res` int(11) NOT NULL,
+  `deleted` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `monabi_add`.`ultima_res` (`id`, `ultima_res`) VALUES ('0', '0');
+
+
+
+
